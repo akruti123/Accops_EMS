@@ -1,0 +1,36 @@
+﻿@model EmployeeManagementSystem.Models.Department
+  
+@{
+    ViewBag.Title = "AddDepartment";
+}
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Register Department</h2>
+			<hr />
+		</div>
+		@*<div asp-validation-summary="All"></div>*@
+		<div class="mb-3">
+			<label asp-for="DepartmentName"></label>
+			<input asp-for="DepartmentName" class="form-control" />
+			<span asp-validation-for="DepartmentName" class="text-danger"></span>
+		</div>
+		@if(TempData["error"]!=null&&TempData["error"].Equals("Department Already Exists"))
+		{
+			<h6 class="text-danger">@TempData["error"]</h6>
+		}
+		<button type="submit" class="btn btn-primary" style="width:150px">Add Department</button>
+		<a id="add_department" asp-controller="Admin" asp-action="AdminHomePage" class="btn btn-secondary" style="width:150px">
+			Back to List
+		</a>
+	</div>
+</form>
+@section Scripts{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
+
+
+
+

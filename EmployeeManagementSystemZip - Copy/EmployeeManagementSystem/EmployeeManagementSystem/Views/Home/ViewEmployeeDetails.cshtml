@@ -1,0 +1,114 @@
+﻿@model EmployeeManagementSystem.Models.Employee
+  
+@{
+    ViewBag.Title = "sess_user_name";
+    ViewBag.Title = "Dep";
+}
+<p>Hello @ViewBag.sess_user_name</p>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Employee Details</h2>
+		</div>
+        
+	</div>
+    <br /><br />
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <tbody>
+        <tr>
+                Employee Email :
+			
+		</tr>
+      
+        <tr>
+            @Model.Email
+        </tr>
+          <br></br>
+        <tr>
+                Employee Department :
+			
+		</tr>
+         <tr>
+             @ViewBag.Dep
+			
+		</tr>
+        
+          <br></br>
+        <tr>
+                Employee Name :
+			
+		</tr>
+        <tr>
+            @Model.Name
+        </tr>
+          <br></br>
+        <tr>
+                Employee PhoneNumber :
+			
+		</tr>
+        <tr>
+            @Model.PhoneNumber
+        </tr>
+          <br></br>
+        <tr>
+                Employee Joining Date :
+			
+		</tr>
+        <tr>
+            @Model.JoiningDate
+        </tr>
+          <br></br>
+          <tr>
+                Employee Address :
+			
+		</tr>
+      
+        <tr>
+            @Model.Address
+        </tr>
+          <br></br>
+          
+        
+        <br></br>
+        <tr>
+                Employee City :
+			
+		</tr>
+        <tr>
+            @Model.City
+        </tr>
+        <br></br>
+        <tr>
+                Employee ZipCode :
+			
+		</tr>
+        <tr>
+            @Model.Zipcode
+        </tr>
+        <br></br>
+        <tr>
+                Employee State :
+			
+		</tr>
+        <tr>
+            @Model.State
+        </tr>
+        <br></br>
+        <tr>
+                Employee Country :
+			
+		</tr>
+        <tr>
+            @Model.Country
+        </tr>
+    
+       
+    </tbody>
+
+    </table>
+</div>
+
+
+
+
